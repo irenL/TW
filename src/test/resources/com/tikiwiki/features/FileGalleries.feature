@@ -25,6 +25,7 @@ Feature: Upload and Delete File
     And I see the menu options for File Galleries:
       | List Galleries |
       | Upload File    |
+    When I upload a file "defect" with a "/src/test/resources/testdata/defect.jpg"
     And I delete "Defect" from File Galleries
     Then I verify the "Defect" is not in File Galleries
     And I logout from TikiWiki
