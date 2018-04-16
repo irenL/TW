@@ -64,11 +64,13 @@ public class FileGalleries {
 			BrowserUtils.waitFor(2);
 		    break;
 		case "Blogs":
-			mainPage.blogs.click();
+			mainPage.ILYhomeBlogsLink.click();
+			BrowserUtils.waitFor(2);
 		    break;
 		case "Forums":
-			mainPage.forums.click();
-		    break;
+			mainPage.ILYhomeForumsListLink.click();
+			BrowserUtils.waitFor(2);
+			break;
 		case "File Galleries":
 			mainPage.fileGalleries.click();
 		    break;
