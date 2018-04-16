@@ -76,8 +76,10 @@ public class MainPage {
 	@FindBy(xpath="//a[@href='#menu_option250']")
 	public WebElement articles;
 
+	@FindBy(xpath = "//*[@href='#menu_option266']")
 	public WebElement blogs;
 
+	@FindBy(xpath = "//*[@href='#menu_option272']")
 	public WebElement forums;
 
 	@FindBy(xpath="//a[contains(text(),'File Galleries')]")
@@ -101,6 +103,12 @@ public class MainPage {
 
 
 
+
+
+
+
 	
 	
 }
+
+	

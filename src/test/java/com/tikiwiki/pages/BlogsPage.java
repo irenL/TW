@@ -27,11 +27,21 @@ private WebDriver driver;
 	
 	@FindBy(xpath = "//tr[2]//span")
 	public WebElement ILYblogHooverOverLink;
+	
+	@FindBy(linkText="Remove")
+	public WebElement ILYBlogsRemove;
+	
+	@FindBy(xpath = "//*[@id='col1']//td[1]")
+	public WebElement ILYBlogsTableButton;
 
 	//!!! ADD click on delete button
 	
 	@FindBy(xpath ="//*[.='Confirm action']")
 	public WebElement ILYblogConfirmActionButton;
+	
+	
+	@FindBy(xpath ="//td[1]")
+	public WebElement ILYblogListNames;
 	
 	
 	
