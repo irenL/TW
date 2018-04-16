@@ -1,8 +1,8 @@
 #Iryna Liakhovych
-@article
+@article @ft
 Feature: Create And Delete New Articles
 
-  @createArt @ft 
+  @createArt  
   Scenario Outline: Create Article
     Given I login to TikiWiki
     When I click to Articles menu
@@ -26,7 +26,7 @@ Feature: Create And Delete New Articles
       | Todays News         | World           | Easter Sunday Celebrating |
       | This Day In History | History Stories | Oldest Human Footprints   |
 
-  @searchArt @smoke @ft
+  @searchArt @smoke 
   Scenario Outline: Search Article
     Given I login to TikiWiki
     When I click to Articles menu

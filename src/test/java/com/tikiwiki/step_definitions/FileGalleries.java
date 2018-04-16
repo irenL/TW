@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -106,8 +107,8 @@ public class FileGalleries {
 
 	@When("^I upload a file \"([^\"]*)\" with a \"([^\"]*)\"$")
 	public void i_upload_a_file_name_with_a_src_test_resources_testdata_defect_jpg(String file, String filepath) {
-	   mainPage.fileGalleries.click();
-	   fileGallPage.uploadFileLink.click();
+	   BrowserUtils.waitFor(2);
+		fileGallPage.uploadFileLink.click();
 	   
 	   fileGallPage.chooseFiles.sendKeys(System.getProperty("user.dir")+filepath);
 	   assertTrue(fileGallPage.cbox.getText().contains(file), "Uploaded filename missmatch checkbox");
@@ -136,11 +137,21 @@ public class FileGalleries {
 		BrowserUtils.hover(driver.findElement(By.xpath(xpathfileToDelete)));
 		driver.findElement(By.linkText("Delete")).click();
 		fileGallPage.confirmActionButton.click();
+		
+		try{
+			if(fileGallPage.rbox_1.isDisplayed()) {
+				fileGallPage.goBack.click();
+				fileGallPage.confirmActionButton.click();
+				}
+		}catch(NoSuchElementException e) {
+			return;
+		}	
 	}
 
 	@Then("^I verify the \"([^\"]*)\" is not in File Galleries$")
 	public void i_verify_the_is_not_in_File_Galleries(String filename) {
-		assertTrue(!fileGallPage.firstFileName.getText().equals(filename));
+	//	assertTrue(!fileGallPage.firstFileName.getText().equals(filename));
+		assertTrue(fileGallPage.noRecordsFoundText.isDisplayed(), "No records found. is not displayed");
 	}
 
 }

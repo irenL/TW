@@ -1,8 +1,8 @@
 #Author: Ahmed Allaberdiyev
-@spreadsheets
+@spreadsheets @ft
 Feature: Create and Delete Spreadsheets
 
-  @create_sheet @smoke @ft
+  @create_sheet @smoke 
   Scenario Outline: Create Spreadsheet
     Given I login to TikiWiki
     When I click to Spreadsheets menu
@@ -18,7 +18,7 @@ Feature: Create and Delete Spreadsheets
       | DefecTeamSheet1 | inputData1            | inputData2            |
       | DefecTeamSheet2 | inputData1 for sheet2 | inputData2 for sheet2 |
 
-  @delete_sheet @ft
+  @delete_sheet 
   Scenario: Delete Spreadsheet
     Given I login to TikiWiki
     When I click to Spreadsheets menu

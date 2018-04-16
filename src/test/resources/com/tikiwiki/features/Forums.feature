@@ -1,8 +1,8 @@
 #Author: ilyas
-@forums
+@forums @ft
 Feature: Create and Delete Forums
 
-  @create_forums @ft @smoke
+  @create_forums  @smoke
   Scenario Outline: Creating new forums by reading from the tables
     Given I login to TikiWiki
     When I click to Forums menu
@@ -18,7 +18,7 @@ Feature: Create and Delete Forums
       | ForumTiki1 | Desc1       |
       | ForumTiki2 | Desc2       |
 
-  @delete_forums @ft
+  @delete_forums 
   Scenario Outline: Deleting forums from the
     Given I login to TikiWiki
     When I click to Forums menu

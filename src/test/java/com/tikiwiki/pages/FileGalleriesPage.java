@@ -15,6 +15,14 @@ public class FileGalleriesPage {
 		PageFactory.initElements(driver, this);
 	}
 	
+public WebElement rbox_1;
+	
+	@FindBy(linkText="Go back")
+	public WebElement goBack;
+	
+	@FindBy(xpath="(//a[contains(text(),'File Galleries')])[3]")
+	public WebElement fileGalleries;
+	
 	@FindBy(xpath="//a[contains(text(),'List Galleries')]")
 	public WebElement listGalleriesLink;
 	
@@ -33,5 +41,8 @@ public class FileGalleriesPage {
 	
 	@FindBy(linkText="Confirm action")
 	public WebElement confirmActionButton;
+	
+	@FindBy(xpath="//td[.='No records found.']")
+	public WebElement noRecordsFoundText;
 
 }

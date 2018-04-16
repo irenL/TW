@@ -1,8 +1,8 @@
 #Author: Ahmed Allaberdiyev
-@dev @file_galleries
+@dev @file_galleries @ft
 Feature: Upload and Delete File
 
-  @upload_file @smoke @ft 
+  @upload_file @smoke 
   Scenario Outline: Upload file
     Given I login to TikiWiki
     When I click to File Galleries menu
@@ -18,7 +18,7 @@ Feature: Upload and Delete File
       | defect2  | /src/test/resources/testdata/defect2.jpg |
       | defect   | /src/test/resources/testdata/defect.jpg  |
 
-  @delete_file @ft
+  @delete_file 
   Scenario: Delete file
     Given I login to TikiWiki
     When I click to File Galleries menu

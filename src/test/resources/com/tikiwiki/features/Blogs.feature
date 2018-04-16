@@ -1,6 +1,6 @@
 #Author: ilyas
 
-@blogs
+@blogs @ft
 Feature: Create and Delete Blogs
  
 

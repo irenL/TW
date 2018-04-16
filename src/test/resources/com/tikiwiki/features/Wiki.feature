@@ -1,8 +1,8 @@
 #Iryna Liakhovych
-@wikipage
+@wikipage @ft
 Feature: Create And Delete New Wiki pages
 
-  @createWP @ft
+  @createWP 
   Scenario Outline: Create page
     Given I login to TikiWiki
     When I click to Wiki menu
@@ -25,7 +25,7 @@ Feature: Create And Delete New Wiki pages
       | DefecTeam_Page1 | Welcome To Our Page1 |
       | DefecTeam Page2 | Welcome To Our Page2 |
 
-  @deleteWP @smoke @ft
+  @deleteWP @smoke 
   Scenario Outline: Delete New Created Page
     Given I login to TikiWiki
     When I click to Wiki menu
