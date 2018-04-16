@@ -130,6 +130,7 @@ public class FileGalleries {
 
 	@When("^I delete \"([^\"]*)\" from File Galleries$")
 	public void i_delete_from_File_Galleries(String filename) {
+		mainPage.fileGalleries.click();
 		fileGallPage.listGalleriesLink.click();
 		String xpathfileToDelete = "//a[.='" +filename+ "']/..//..//a[@class='fgalname tips']";
 		BrowserUtils.hover(driver.findElement(By.xpath(xpathfileToDelete)));
