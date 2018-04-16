@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TikiWiki Automation" verbose="2">
+	<test name="Functional tests">
+		<classes>
+			<class name="com.tikiwiki.runners.CukesRunner"></class>
+		</classes>
+	</test>
+</suite>
